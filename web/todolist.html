@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO リスト</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <!-- hogehoge -->
+    <div class="container">
+        <input type="text" class="txtb" placeholder="Add a Task" autofocus>
+        <div class="notcomp">
+            <h3>Not Completed これからやる物</h3>
+        </div>
+        <div class="comp">
+            <h3>Completed 完了済み</h3>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+    $(".txtb").on("keyup", function(e){
+        if(e.keyCode == 13 && $(".txtb").val()!="") {
+            var new_task = $("<div class='task'></div>").text($(".txtb").val());
+            var del = $("<i class='fas fa-trash-alt'>v</i>").click(function(){
+                var p = $(this).parent();
+                p.fadeOut(function(){
+                    p.remove();
+                });
+            });
+            var chk = $("<i class='fas fa-check'>x</i>").click(function(){
+                var p = $(this).parent();
+                p.fadeOut(function(){
+                    $(".comp").append(p);
+                    p.fadeIn();
+                });
+                $(this).remove();
+            });
+            new_task.append(del,chk);
+            $(".notcomp").append(new_task);
+
+            $(".txtb").val("");
+        }
+    });
+    </script>
+</body>
+</html>

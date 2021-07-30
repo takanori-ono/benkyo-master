@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="container body-content">
+        <h2>
+            作成てすと
+        </h2>
+        <nav>
+            <ul class="pager">
+                <li class="previous"><a href="#">前へ</a></li>
+                <li class="next"><a href="#">次へ</a></li>
+            </ul>
+        </nav>
+
+        <form action="" method="POST">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-xs-2 control-label bg-danger">Date1</label>
+                    <div class="col-xs-4 ">
+                        <input type="text" name="date1" id="date1" class="form-control text-box single-line"
+                            data-toggle="tooltip" title="tooltip 入れてみた">
+                    </div>
+                </div>
+                <p class="text-center">hogehoge</p>
+                <div class="form-group">
+                    <label for="date2" class="col-md-2 control-label">Date2</label>
+                    <div class="col-md-10">
+                        <input type="text" name="date2" id="date2" class="form-control text-box single-line"
+                            value="hogehoge" data-toggle="tooltip" title="ここはDate2です。今日の天気は晴れです。少しでもいい感じになるようにお願いします。">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary glyphicon glyphicon-arrow-right">OK</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+        </form>
+        <div class="col-sm-2 bg-info">hoge</div>
+        <div class="col-sm-4 bg-primary">
+            <p>
+                hogehogehoge
+                <hr>
+                hogehogehoge
+            </p>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">あけおめ！</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    昨年は大変お世話になりました。今年もどうぞよろしく
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"> よろしく</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap3/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+
+</html>

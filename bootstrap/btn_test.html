@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <td>
+                    <div class="btn-group" data-toggle="buttons"  name="1234567890">
+                        <label class="btn btn-success btn-sm kyuyo_shonin active" name="0">
+                            <input type="radio" name="options" id="option1" checked> 時間外手当
+                        </label>
+                        <label class="btn btn-info btn-sm kyuyo_shonin" name="1">
+                            <input type="radio" name="options" id="option2"> 代休処理
+                        </label>
+                        <label class="btn btn-info btn-sm kyuyo_shonin" name="2">
+                            <input type="radio" name="options" id="option3"> その他手当
+                        </label>
+                    </div>
+                </td>
+                <td>hoge</td>
+            </tr>-
+            <tr>
+                <td>
+                    <div class="btn-group" data-toggle="buttons"  name="1234567891">
+                        <label class="btn btn-info btn-sm kyuyo_shonin active"  name="0">
+                            <input type="radio" name="0" id="option1" checked> 時間外手当
+                        </label>
+                        <label class="btn btn-info btn-sm kyuyo_shonin"  name="1">
+                            <input type="radio" name="1" id="option2"> 代休処理
+                        </label>
+                        <label class="btn btn-info btn-sm kyuyo_shonin"  name="2">
+                            <input type="radio" name="2" id="option3"> その他手当
+                        </label>
+                    </div>
+                </td>
+                <td>hoge</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn-group" data-toggle="buttons" name="1234567893">
+                        <label class="btn btn-info btn-sm kyuyo_shonin" name="0" >
+                            <input type="radio"> 時間外手当
+                        </label>
+                        <label class="btn btn-info btn-sm kyuyo_shonin  active" name="1" >
+                            <input type="radio" > 代休処理
+                        </label>
+                        <label class="btn btn-info btn-sm kyuyo_shonin" name="2">
+                            <input type="radio" > その他手当
+                        </label>
+                    </div>
+                </td>
+                <td>hoge</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="bootstrap3/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+    <script>
+        $('.kyuyo_shonin').on('click', function () {
+            console.log( $(this).parent());
+            console.log('kita:' + $(this).attr('name') +':' + $(this).parent().attr('name'));
+            // $(this).button('complete') // button text will be "finished!"
+        })
+    </script>
+</body>
+
+</html>

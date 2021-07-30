@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="container" style="margin: 30px;">
+        <h2 style="margin: 30px 0px;">
+            フォームてすと　Horizontal
+        </h2>
+
+        <form action="" method="POST" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-xs-2 control-label bg-danger">Date1</label>
+                <div class="col-xs-4 ">
+                    <input type="text" name="date1" id="date1" class="form-control text-box single-line"
+                        data-toggle="tooltip" title="tooltip 入れてみた">
+                </div>
+                <div class="col-xs-4 " style="padding-left: 0px;">
+                    <input type="text" name="date3" id="date3" class="form-control text-box single-line"
+                        data-toggle="tooltip" title="tooltip 入れてみた" style="margin-left: 0px;">
+                </div>
+                <button class="btn btn-info col-xs-2 ">hoge</button>
+            </div>
+            <div class="form-group">
+                <p class="col-ocol-xs-2">hogehoge <br> ながめの文章</p>
+            </div>
+            <div class="form-group">
+                <label for="date2" class="col-md-2 control-label bg-warning">Date2</label>
+                <div class="col-md-10">
+                    <input type="text" name="date2" id="date2" class="form-control text-box single-line"
+                        value="hogehoge" data-toggle="tooltip" title="ここはDate2です。今日の天気は晴れです。少しでもいい感じになるようにお願いします。">
+                </div>
+            </div>
+            <button class="btn btn-primary glyphicon glyphicon-arrow-right">OK</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <label class="radio-inline">
+                <input type="radio" name="rd" checked>RD1
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="rd">RD2
+            </label>
+        </form>
+        <div class="pull-right">hoge</div>
+        <div class="pull-left">ほほ</div>
+        <div class="pull-left btn btn-primary">もう一つ</div>
+    </div>
+!
+
+    <script src="bootstrap3/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+
+</html>
