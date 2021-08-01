@@ -1,0 +1,20 @@
+table_test4.html
+
+ヘッダには、昇順降順を表すアイコンが付加されるため、spanタグが必要
+
+設定クラス
+th sort_head ソート可能ヘッダであることを表す
+tr sortable-item ソートする行
+
+カスタム属性
+table data-sort_table="1"　テーブル番号
+th data-key_no="1" ソートキーの種類NO（１テーブル内で一意）
+td data-key_no="1" ソートキーの種類NO（ヘッダと合わせる）
+   data-sort-key="40" ソートキーデータ
+
+グローバル変数
+int tbl_no
+int sort_key
+int prev_sort_key 直前のソートキー（２回続けて押されたときは反転する）
+bool vert_key
+bool[] vert_ary 昇順降順を記憶
