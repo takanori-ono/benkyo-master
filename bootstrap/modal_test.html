@@ -38,10 +38,11 @@
     <script src="bootstrap3/js/bootstrap.js"></script>
     <script>
         $(function () {
+            var stat=0;
             $('#btnModal').on('click', function () {
-                $('.modal-body .notify1').hide();
-                $('.modal-body .notify2').hide();
-                $('.modal-body .notify1').show();
+                $('.modal-body .notify1,.notify2').hide();
+                //$('.modal-body .notify1').show();
+                stat=0;
                 $('#notifyModal').modal();
             });
 
@@ -51,7 +52,14 @@
                     if(disp!='none'){
                         //console.log('ok');
                         //$('.modal-body').text($('.modal-body').text()+"hoge");
-                        $('.modal-body .notify2').show();
+                        if(stat==0){
+                            $('.modal-body .notify1').show();
+                            stat=1;
+                        }
+                        else if(stat==1){
+                            $('.modal-body .notify2').show();
+                            stat=2;
+                        }
                     }
                 },
                 3000
