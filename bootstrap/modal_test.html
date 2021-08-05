@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal test</title>
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <p>Modalのテスト</p>
+        <button class="btn btn-primary" id="btnModal">押すと</button>
+    </div>
+
+    <div class="modal fade" id="notifyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Title</h4>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li class="notify1">新しい残業申請があります。</li>
+                        <li class="notify2">新しい出退勤申請があります。</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"> </script>
+    <script src="bootstrap3/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('#btnModal').on('click', function () {
+                $('.modal-body .notify1').hide();
+                $('.modal-body .notify2').hide();
+                $('.modal-body .notify1').show();
+                $('#notifyModal').modal();
+            });
+
+            setInterval(
+                function(){
+                    var disp = $('#notifyModal').css('display');
+                    if(disp!='none'){
+                        //console.log('ok');
+                        //$('.modal-body').text($('.modal-body').text()+"hoge");
+                        $('.modal-body .notify2').show();
+                    }
+                },
+                3000
+            );
+        });
+    </script>
+</body>
+
+</html>
