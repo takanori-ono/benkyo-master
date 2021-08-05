@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セレクタの優先順位</title>
+    <link rel="stylesheet" href="bootstrap3/css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="container " style="margin: 30px;">
+        <div class="parent1">
+            <p class="aaa">aaa in parent1</p>
+            <p class="bbb">bbb in parent1</p>
+        </div>
+        <div class="parent2">
+            <p class="aaa">aaa in parent2</p>
+            <p class="bbb">bbb in parent2</p>
+        </div>
+
+        <button id="test">push</button>
+    </div>
+
+    <script src="js/jquery.js"> </script>
+    <script src="bootstrap3/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('#test').on('click', function(){
+                //$('.parent1 .aaa,.bbb').css('color', '#f00');// .bbbはどちらも
+                $('.parent1').find('.aaa,.bbb').css('color', '#f00');// .bbbはどちらも
+                //$('.aaa,.parent2 .bbb').css('color', '#f00');// .bbbはどちらも
+            });
+        });
+    </script>
+</body>
+
+</html>
