@@ -1,0 +1,37 @@
+// メディアクエリ表示幅とよる制御
+// そのほか、印刷時等も指定できるみたい
+@media (max-width:800px) {
+    body{
+        background-color: gray;
+    }
+}
+
+// sassなら変数も使える
+$var_test: orange;
+
+.blue {
+    color: blue;
+    .red {
+        color: red;
+        .yellow {
+            color: yellow;
+        }
+    }
+    // &::after {
+    //     content: "疑似要素";
+    // }
+    &:hover {
+        text-decoration: underline;
+        color: $var_test;
+    }
+}
+
+// 先にスタイルを設定しておいてあとからそれを割り当てる
+// mixin から include
+@mixin large_style {
+    font-size: 2em;
+}
+
+.yellow {
+    @include large_style();
+}

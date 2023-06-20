@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/test.css"> -->
+    <link rel="stylesheet" href="css/benkyo.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSSセレクタの指定方法</h1>
+    <p>段落</p>
+    <div>divタグ</div>
+    <div class="blue">
+        青色divタグ
+        <div class="red">
+            青の中の赤
+            <div class="red">
+                青の中の赤の中の赤
+                <div class="yellow">青の直下じゃない黄色</div>
+            </div>
+        </div>
+        <div class="yellow">青の直下の黄色</div>
+    </div>
+    <div class="red">
+        青の中じゃないの赤
+    </div>
+
+    <div class="">対象の直前</div>
+    <div class="taisho">これが対象</div>
+    <div class="">これが直後</div>
+    <div class="">これがその次</div>
+</body>
+</html>
