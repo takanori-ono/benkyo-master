@@ -1,0 +1,33 @@
+
+body{
+    background-color: gray;
+}
+/* カンマで区切れば同類 */
+p, h1, .blue {
+    color: aqua;
+}
+
+/* スペースは子孫　青の中の赤のみ */
+.blue .red {
+    color: red;
+}
+
+/* > は直下　青の中の赤のみ */
+.blue > .yellow {
+    color: yellow;
+}
+
+/* + は隣接(直後) */
+.taisho + div {
+    font-weight: bold;
+}
+
+/* 疑似要素 content が重要？*/
+h1::after {
+    content: "hogehoge";
+    /* 好きな位置に配置可能::afterの意味があるか？ */
+    position: absolute; 
+    bottom: 0px;
+    right: 0px;
+    color: blue;
+}

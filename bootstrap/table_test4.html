@@ -254,7 +254,29 @@
         </form>
     </div>
 
+    <div id="dialog-form" title="Create new user">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="Jane Smith"
+                    class="text ui-widget-content ui-corner-all">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" value="jane@smith.com"
+                    class="text ui-widget-content ui-corner-all">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" value="xxxxxxx"
+                    class="text ui-widget-content ui-corner-all">
+
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+
     <script src="js/jquery.js"> </script>
+    <script src="bootstrap3/js/jquery-ui-1.12.1.min.js"> </script>
     <script src="bootstrap3/js/bootstrap.js"></script>
     <script src="js/store.legacy.min.js"></script>
     <script>
@@ -268,24 +290,24 @@
         const up_icon_class = 'glyphicon glyphicon-chevron-up';
         const down_icon_class = 'glyphicon glyphicon-chevron-down';
 
-        function get_vert_from_store(t,s) {
+        function get_vert_from_store(t, s) {
             var k = 'table_test_vert_ary_' + t + '-' + s;
             var v = store.get(k);
-            if(v === undefined) return false;
+            if (v === undefined) return false;
             return v;
         };
-        function set_vert_from_store(t,s,v) {
+        function set_vert_from_store(t, s, v) {
             var k = 'table_test_vert_ary_' + t + '-' + s;
-            store.set(k,v);
+            store.set(k, v);
         };
-        function get_prev_sort_key(t){
+        function get_prev_sort_key(t) {
             var k = 'table_test_prev_sk_' + t;
             var v = store.get(k);
             return v;
         }
-        function set_prev_sort_key(t,v){
+        function set_prev_sort_key(t, v) {
             var k = 'table_test_prev_sk_' + t;
-            var v = store.set(k,v);
+            var v = store.set(k, v);
         }
         function set_vert_key() {
             //vert_key = vert_ary[sort_key - 1];
@@ -304,10 +326,10 @@
             start_the_sort();
             change_icon($(this));
         });
-        function onload_sort_table(t){
+        function onload_sort_table(t) {
             tbl_no = t;
             var prev_key = get_prev_sort_key(tbl_no);
-            if(prev_key !== undefined){
+            if (prev_key !== undefined) {
                 sort_key = prev_key;
                 vert_key = get_vert_from_store(tbl_no, sort_key);
                 start_the_sort();
@@ -320,8 +342,8 @@
         }
         function remove_all_sort_icon() {
             $('[data-sort_table="' + tbl_no + '"] .sort_head').children('span')
-            .removeClass(up_icon_class)
-            .removeClass(down_icon_class);
+                .removeClass(up_icon_class)
+                .removeClass(down_icon_class);
         }
         function start_the_sort() {
             $('[data-sort_table="' + tbl_no + '"] tbody').html(

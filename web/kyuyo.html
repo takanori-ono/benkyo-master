@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>給与明細　12月</h2>
+    <div style="">
+
+    <div style="width: 600px;height: 400px;border: 1px solid;">
+        <div style="border: 1px solid; width: 30px; text-align: center;display: inline-block;">控除</div>
+        <div style="border: 1px solid; width: 100px; text-align: center;display: inline-block;">hoge</div>
+        <div style="border: 1px solid; width: 100px; text-align: center;display: inline-block;">hoge1</div>
+        <div style="border: 1px solid; width: 100px; text-align: center;display: inline-block;">hoge2</div>
+        <div style="border: 1px solid; width: 100px; text-align: center;display: inline-block;">hoge3</div>
+        <div style="border: 1px solid; width: 100px; text-align: center;display: inline-block;">hoge4</div>
+    </div>
+</div>
+
+<button onclick="printContent()">印刷</button>
+<div id="printContent">
+    <h1>印刷サンプル</h1>
+    <p>これは印刷されるテキストです。</p>
+    <hr>
+</div>
+<button onclick="downloadAndPrintPDF2()">PDFをダウンロードして印刷</button>
+
+<script>
+    function printContent() {
+        var pdf_url = 'http://127.0.0.1:5500/web/sample.pdf';
+        var head_html = '<html><head><title>印刷</title></head><body>';
+        var printWindow = window.open(pdf_url, '', 'width=600,height=600');
+        //var content = document.getElementById('printContent').innerHTML;
+        //printWindow.document.open();
+        //printWindow.document.write(head_html + content );
+        //printWindow.document.close();
+        //printWindow.print();
+        //printWindow.close();
+    }
+    function downloadAndPrintPDF2() {
+        var pdf_url = 'http://127.0.0.1:5500/web/sample.pdf';
+        var newWind = window.open(pdf_url, '_blank');
+        newWind.onload = function (){
+            //newWind.print();
+            document.execCommand('print', false, null);
+        }
+    }
+    function downloadAndPrintPDF() {
+        var pdf_url = 'http://127.0.0.1:5500/web/sample.pdf';
+        var iframe = document.createElement('iframe');
+        iframe.style.display='none';
+        iframe.src = pdf_url;
+
+        document.body.appendChild(iframe);
+
+        iframe.onload = function(){
+            iframe.contentWindow.print();
+        }
+
+    }
+</script>
+</body>
+</html>

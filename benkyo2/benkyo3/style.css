@@ -1,0 +1,33 @@
+.main{
+    width:900px;
+    margin: auto;
+}
+
+.btn-area {
+    height:2em;
+    border: 1px solid grey;
+    text-align: left;
+}
+ 
+.co-right {
+    float: right!important;
+}
+
+.co-left {
+    /* float: left; */
+    display:inline-block;
+}
+
+.clear-both{
+    clear: both;
+}
+.ma {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;
+}
+.btn {
+    width:15px;
+    height:15px;
+}
+

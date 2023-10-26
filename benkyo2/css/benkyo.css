@@ -1,0 +1,22 @@
+@media (max-width: 800px) {
+  body {
+    background-color: gray;
+  }
+}
+.blue {
+  color: blue;
+}
+.blue .red {
+  color: red;
+}
+.blue .red .yellow {
+  color: yellow;
+}
+.blue:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.yellow {
+  font-size: 2em;
+}/*# sourceMappingURL=benkyo.css.map */
