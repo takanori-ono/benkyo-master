@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/modal_test.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>モーダルウィンドウ</h2>
+    <button id="btnOpen" name="btnOpen">モーダルを開く</button>
+
+    <div class="modal" id="modal_window">
+        <div class="modal-content">
+            <span class="modal_close" id="close_window">&times;</span>
+            <h3>これがモーダルです</h3>
+            <p>これが内容です。</p>
+            <div class="modal-long"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#btnOpen').on('click', function(){
+                $('.modal').show();
+            })
+            $('#close_window').on('click', function(){
+                $('.modal').hide();
+            })
+        })
+    </script>
+</body>
+</html>

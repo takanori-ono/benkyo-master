@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/themes/base/datepicker.css">
+    <link rel="stylesheet" href="css/test.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <div class="left_div">
+        <div class="cell">
+            <div class="label">
+                <label for="inner_text" class="inner_label">inner_label</label>
+            </div>
+            <div class="text"><input type="text" name="inner_text" id="inner_text"></div>
+        </div>
+        <div class="cell">label2</div>
+        <div class="cell">label3</div>
+        <div class="cell">
+            <div>123</div>
+            <div>456</div>
+        </div>
+        <div class="cell">ラベル２1234567890123</div>
+        <div class="cell">ラベル３</div>
+
+    </div>
+    <div class="center_div">
+        <div>content1</div>
+        <div>
+            <div>123</div>
+            <div>456</div>
+        </div>
+        <div>content3</div>
+        <div>content4</div>
+        <div>コンテント２</div>
+        <div>コンテント３</div>
+        <div><input type="text" name="datetest" id="datetest" class="datepicker"></div>
+        
+    </div>
+    <div class="right_div">
+        right
+    </div>
+   </div> 
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/jquery-ui-1.12.1.min.js"></script>
+   <script>
+    $(function() {
+        // alert('on load');
+        $('.datepicker').datepicker({ dateFormat: 'yy年m月d日' });
+    })
+   </script>
+</body>
+</html>
