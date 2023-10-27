@@ -1,0 +1,23 @@
+.soto {
+    width: 200px;
+    height: 200px;
+    border: 1px solid lightgrey;
+    background-color: beige;
+    overflow: auto;
+}
+
+.soto p {
+    font-size: large;
+    white-space: pre;/*これを入れないと途中で折り返されてスクロールの意味がなくなる*/
+}
+
+.soto div {
+    white-space: pre;
+}
+
+.inner {
+    width: 3px;
+    height: 3px;
+    border: 1px solid lightgrey;
+    background-color: lightcyan;
+}
