@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: bisque;
+    width: 900px;
+    margin: 20px auto;
+}
+
+.left_waku {
+    float:left;
+    width:50%;
+    margin: 0;
+    padding: 2px;
+}
+.right_waku {
+    float:left;
+    width:50%;
+    margin: 0;
+    padding: 2px;
+}
+
+.login_waku {
+    width: 100%;
+    height: 400px;
+    /* margin: 0px 10px; */
+    /* float: left; */
+    border: 1px solid lightgray;
+    /* margin:5px; */
+}
+.kaisetu_waku {
+    width: 100%;
+    height: 400px;
+    /* margin: 0px 10px; */
+    /* margin-right: 10px; */
+    /* float: left; */
+    border: 1px solid lightgray;
+    /* margin:5px; */
+}
+
+.inner_div {
+    float: left;
+    width: 50%;
+    /* border: 1px solid lightgray; */
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+input {
+    width: 100%;
+}
+
+p {
+    margin: 10px;
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    margin: 50px auto 50px;
+    margin-top: 50px;
+    padding: 10px 30px 10px 30px;
+}
+.login {
+    background-color: orange;
+}
+.start {
+    background-color: red;
+
+}
+
+.kaisetu_mongon {
+    margin-top:100px;
+}
+
+.kaisetu_inner_div {
+    /* margin-right: 50px;
+    text-align: right;
+    background-color: beige;
+    padding: 5px; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    margin-right: 20px;
+    background-color: beige;
+}
+
+.kaisetu_btn {
+    width: auto;
+    margin-right: 2px;
+    /* width:60px;
+    display: block;
+    float: right; */
+    /* margin: auto; */
+}
