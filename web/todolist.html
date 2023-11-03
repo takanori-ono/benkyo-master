@@ -19,22 +19,23 @@
             <h3>Completed 完了済み</h3>
         </div>
     </div>
-    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
     $(".txtb").on("keyup", function(e){
         if(e.keyCode == 13 && $(".txtb").val()!="") {
             var new_task = $("<div class='task'></div>").text($(".txtb").val());
-            var del = $("<i class='fas fa-trash-alt'>v</i>").click(function(){
+            var del = $("<i class='fas fa-trash-alt'>x</i>").click(function(){
                 var p = $(this).parent();
                 p.fadeOut(function(){
                     p.remove();
                 });
             });
-            var chk = $("<i class='fas fa-check'>x</i>").click(function(){
+            var chk = $("<i class='fas fa-check'>v</i>").click(function(){
                 var p = $(this).parent();
-                p.fadeOut(function(){
+                p.fadeOut(100, function(){
                     $(".comp").append(p);
-                    p.fadeIn();
+                    p.fadeIn(100);
                 });
                 $(this).remove();
             });
