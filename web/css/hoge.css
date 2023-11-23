@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: dotted 1px peru; */
+    font-family: "montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+}
+.moji1 {
+    font-size: xx-large;
+}
+
+.container {
+    margin: 10px auto;
+    border: 1px solid lightgrey;
+    max-width: 900px;
+    min-width: 700px;
+
+    /* height: 500px; */
+    display: flex;
+}
+
+.group {
+    margin: 10px;
+    padding: 5px 20px;
+    border: 1px solid lightgreen;
+    display: inline-block;
+}
+
+legend {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: aquamarine;
+    border-radius: 15px;
+    padding:2px 15px;
+    width: auto;
+}
+
+input[type=radio] {
+    margin-right:5px;
+    margin-left:10px;
+}
