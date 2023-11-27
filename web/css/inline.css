@@ -82,3 +82,25 @@ input[type=button] {
     height: 30px;
     font-size: 1rem;
 }
+
+.sayu_flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: lightcyan;
+    /* height: 600px; */
+    min-width: 600px;
+    margin:10px;
+    border: 1px solid lightgreen;
+    font-size: 0;
+ }
+
+ .sayu_flex .hidari_grp {
+    padding: 4px;
+    width: auto;
+}
+
+.sayu_flex .migi_grp {
+    padding: 4px;
+    width: auto;
+}
