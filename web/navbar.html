@@ -28,7 +28,7 @@
     </div>
     <div class="container">
         <div class="bunrui">
-            文書分類:
+            文書分類
             <div class="bunrui_row">
                 <input class="bunrui_val" type="button" value="A">
                 <input class="bunrui_desc" type="button" value="総務">
@@ -52,8 +52,31 @@
 
         </div>
         <div class="basic">
-
+            <div class="basic_row">
+                <label for="kanri_no">管理番号</label>
+                <input type="text" name="kanri_no" id="kanri_no">
+            </div>
+            <div class="basic_row">
+                <label for="bunsho_kind">文書種類</label>
+                <!-- <input type="text" name="bunsho_kind" id="bunsho_kind"> -->
+                <select name="bunsho_kind" id="bunsho_kind">
+                    <option value="1">発送文書</option>
+                    <option value="2">受信文書</option>
+                    <option value="3">その他文書</option>
+                </select>
+            </div>
+            <div class="basic_row">
+                <label for="toriatukai_kbn">取扱区分</label>
+                <input type="text" name="toriatukai_kbn" id="toriatukai_kbn">
+            </div>
+            <div class="basic_row">
+                <label for="kessai_kbn">決裁区分a</label>
+                <input type="text" name="kessai_kbn" id="kessai_kbn">
+            </div>
         </div>
+    </div>
+    <div class="low_container">
+        low...
     </div>
 </body>
 </html>
