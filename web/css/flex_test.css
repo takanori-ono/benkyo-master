@@ -4,7 +4,7 @@
 
 .container {
     background-color: bisque;
-    width: 1100px;
+    /* width: 1100px; */
     margin: 20px auto;
 }
 
@@ -60,3 +60,24 @@
     height: 40px;
     border: 1px solid skyblue
 }
+
+.fourth_row{
+    /* background-color: skyblue; */
+    display:flex;
+}
+
+.fourth_row label {
+    /* display: inline-box; */
+    /* width: 100px; */
+    flex-basis: 100px;
+    flex-shrink: 0;
+}
+
+.inner_fourth{
+    width: 200px;
+    height: 40px;
+    border: 1px solid lightcoral;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+

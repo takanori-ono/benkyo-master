@@ -104,3 +104,26 @@ input[type=button] {
     padding: 4px;
     width: auto;
 }
+
+.sayu_flex2 {
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    background-color: lightcyan;
+    /* height: 600px; */
+    min-width: 600px;
+    margin:10px;
+    border: 1px solid lightgreen;
+    font-size: 0;
+ }
+
+ .sayu_flex2 input {
+    display: inline-block;
+    margin: 2px;
+ }
+
+ .sayu_flex2 .kokokara_migi {
+    margin-left: auto; /* 以降、右寄せにできる */
+    background-color: aqua;
+ }
+
