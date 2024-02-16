@@ -39,7 +39,7 @@ legend {
     width: auto;
 }
 
-input[type=radio] {
+input[type=radio],input[type=checkbox] {
     margin-right:5px;
     margin-left:10px;
 }
