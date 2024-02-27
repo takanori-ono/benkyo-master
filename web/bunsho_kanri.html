@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/bunsho_kanri.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav_container">
+            <div class="nav_title">
+                赤村役場　文書管理
+            </div>
+            <div class="nav_collapse">
+                <ul>
+                    <li><a href="">起案</a></li>
+                    <li><a href="">収受</a></li>
+                    <li><a href="">その他</a></li>
+                </ul>
+            </div>
+            <div class="nav_login">
+                <span>令和5年11月24日</span>
+                <span>小野隆徳</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bunrui">
+            文書分類
+            <div class="bunrui_row">
+                <input class="bunrui_val" type="button" value="A">
+                <input class="bunrui_desc" type="button" value="総務">
+            </div>
+            <div class="bunrui_row">
+                <input class="bunrui_val" type="button" value="01">
+                <input class="bunrui_desc" type="button" value="行政">
+            </div>
+            <div class="bunrui_row">
+                <input class="bunrui_val" type="button" value="02">
+                <input class="bunrui_desc" type="button" value="秘書">
+            </div>
+            <div class="bunrui_row">
+                <input class="bunrui_val" type="button" value="001">
+                <input class="bunrui_desc" type="button" value="開催案内関係書">
+            </div>
+            <div class="bunrui_row last_row">
+                <input class="bunrui_val" type="button" value="No">
+                <input class="bunrui_desc" type="button" value="126">
+            </div>
+
+        </div>
+        <div class="basic">
+            <div class="basic_row">
+                <label for="kanri_no">管理番号</label>
+                <input type="text" name="kanri_no" id="kanri_no" value="00767474">
+            </div>
+            <div class="basic_row">
+                <label for="bunsho_kind">文書種類</label>
+                <!-- <input type="text" name="bunsho_kind" id="bunsho_kind"> -->
+                <select name="bunsho_kind" id="bunsho_kind">
+                    <option value="1">発送文書</option>
+                    <option value="2">受信文書</option>
+                    <option value="3">その他文書</option>
+                </select>
+            </div>
+            <div class="basic_row">
+                <label for="toriatukai_kbn">取扱区分</label>
+                <select name="toriatukai_kbn" id="toriatukai_kbn">
+                    <option value="1">メール</option>
+                    <option value="2">FAX</option>
+                    <option value="3">郵便</option>
+                </select>
+                <label for="kessai_kbn">決裁区分</label>
+                <input type="text" name="kessai_kbn" id="kessai_kbn" value="課長">
+            </div>
+            <div class="basic_row">
+                <label for="kessai_kbn">収発番号</label>
+                <input type="text" name="kessai_kbn" id="kessai_kbn" value="5赤 総務 第906号">
+            </div>
+            <div class="basic_row">
+                <label for="kianbi">起案日</label>
+                <input type="text" name="kianbi" id="kianbi" value="令和6年10月24日">
+                <label for="kessaibi">決裁日</label>
+                <input type="text" name="kessaibi" id="kessaibi">
+            </div>
+            <div class="basic_row">
+                <label for="sikobi">施行日</label>
+                <input type="text" name="sikobi" id="sikobi">
+                <label class="kuuhaku"></label>
+                <div class="kuuhaku"></div>
+            </div>
+            <div class="basic_row">
+                <label for="hozon_nengen">保存年限</label>
+                <select name="hozon_nengen" id="hozon_nengen">
+                    <option value="1">1年</option>
+                    <option value="2">3年</option>
+                    <option value="3">5年</option>
+                    <option value="4">10年</option>
+                    <option value="5">20年</option>
+                </select>
+                <label for="haiki_yoteibi">廃棄予定日</label>
+                <input type="text" name="haiki_yoteibi" id="haiki_yoteibi" value="令和8年3月31日">
+            </div>
+        </div>
+    </div>
+    <div class="low_container">
+        <div class="low_row">
+            <label for="kenmei">件名</label>
+            <input type="text" name="kenmei" id="kenmei">
+        </div>
+        low...
+    </div>
+</body>
+
+</html>
+
+<!--
+http://honttoni.blog74.fc2.com/blog-entry-169.html
+    「basic」
+    管理番号　テキスト
+    文書種類　コンボ（発送文書・）
+    取扱区分　コンボ（空欄・メール・FAX・郵送）
+    決裁区分　コンボ（課長・村長・教育長・課長補佐）
+    収発番号　テキスト
+    起案日　日付（空欄あり）
+    決済日　日付（空欄あり）
+    施行日　日付（空欄あり）
+    保存年限　コンボ（１年・２年・３年・５年・１０年）
+    廃棄予定日　日付（自動設定　年度末）
+
+    「titles」
+    件名　テキスト
+    宛先　テキスト
+    発信者　テキスト
+    先方文書の発信日付収発番号　テキスト
+    コメント　テキスト
+    起案理由　テキスト
+    起案課名　マスタ引用？（総務課 / 総務係）
+    起案者　テキスト　自動ログイン者
+    情報公開区分　コンボ（開示・非開示）
+    非開示理由　テキスト
+    告示番号　テキスト
+    添付書類　テキスト
+    備考　テキスト（改行あり）
+-->
