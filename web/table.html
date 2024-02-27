@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reboot.css">,
+    <link rel="stylesheet" href="css/table.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>table 要素の連結</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>見出し１－１</th>
+                    <th>見出し１－２</th>
+                    <th colspan="2">見出し１－3(２列連結)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">見出し2－１<br>（３行連結）</th>
+                    <th>見出し2－２</th>
+                    <td>data 2-3</td>
+                    <td>data 2-4</td>
+                </tr>
+                <tr>
+                    <th>見出し3－２</th>
+                    <td>data 3-3</td>
+                    <td>data 3-4</td>
+                </tr>
+                <tr>
+                    <th>見出し4－２</th>
+                    <td>data 4-3</td>
+                    <td>data 4-4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+            
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th>見出し１</th>
+                    <th>見出し２</th>
+                    <th>見出し３</th>
+                    <th>見出し４</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>データ データデータデータ</td>
+                    <td>データ</td>
+                    <td>data 2-3</td>
+                    <td>data 2-4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
