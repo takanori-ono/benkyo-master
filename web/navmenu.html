@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navmenu の練習</title>
+  <link rel="stylesheet" href="css/navmenu.css">
+</head>
+<body>
+
+  <div class="menuBar">
+    <ul>
+      <li id="menu1"><a href="#">ホーム</a>
+        <div class="subMenu1">
+          <ul>
+            <li><a href="#">111</a></li>
+            <li><a href="#">222</a></li>
+            <li><a href="#">333</a></li>
+            <li><a href="#">444</a></li>
+          </ul>
+        </div>
+      </li>
+      <li id="menu2"><a href="#">オンライン相談</a>
+        <div class="subMenu1">
+          <ul>
+            <li><a href="#">111</a></li>
+            <li><a href="#">222</a></li>
+            <li><a href="#">333</a></li>
+            <li><a href="#">444</a></li>
+          </ul>
+        </div>
+      </li>
+      <li id="menu3"><a href="#">プログ</a>
+        <div class="subMenu1">
+          <ul>
+            <li><a href="#">111</a></li>
+            <li><a href="#">222</a></li>
+            <li><a href="#">333</a></li>
+            <li><a href="#">444</a></li>
+          </ul>
+        </div>
+      </li>
+      <li id="menu4"><a href="#">お問い合わせ</a>
+        <div class="subMenu1">
+          <ul>
+            <li><a href="#">111</a></li>
+            <li><a href="#">222</a></li>
+            <li><a href="#">333</a></li>
+            <li><a href="#">444</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <main>
+    <h2>プルダウンメニューを作る</h4>
+    <a href="https://www.youtube.com/watch?v=pIdlITlngv8">参考動画</a>
+  </main>
+
+  <script>
+    const menus = [];
+    for(let i = 0; i < 4; ++i){
+      let m = document.getElementById(`menu${i+1}`);
+      menus.push(m);
+    }
+    // console.log(menus);
+    document.addEventListener('click', (e)=>{
+      const myId = e.target.id;
+      const parentId = e.target.parentNode.id;
+      console.log(e.target.id);
+      menus.map(m=>{
+        if(myId === m.id || parentId === m.id){
+          m.classList.add('active');
+        } else {
+          m.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

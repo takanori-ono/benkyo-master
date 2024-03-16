@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/desktop.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.menuBar {
+  background-color: rgb(57, 140, 173);
+  text-align: center;
+}
+
+.menuBar ul li {
+  display: inline-block;
+  width: 120px;
+  margin: 0 20px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menuBar ul li a {
+  text-decoration: none;
+  color: bisque;
+  font-weight: bold;
+}
+
+.active,
+.menuBar ul li:hover {
+  background-color: rgb(83, 162, 194);
+}
+
+.subMenu1 {
+  position:absolute;
+  background-color: rgb(57, 140, 173);
+  margin-top: 20px;
+  display: none;
+  transition: all 1s;
+}
+
+.menuBar ul li:hover .subMenu1 {
+  display: block;
+}
+
+.subMenu1 ul li {
+  width: 140px;
+  display: block;
+  margin: 0;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(41, 126, 160);
+}
+
+.menuBar ul li:hover .subMenu1 ul li:last-child {
+  border-bottom: none;
+}
+
+
+main,
+main a {
+  color: white;
+}
