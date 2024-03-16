@@ -6,8 +6,10 @@
 body {
   background-color: lightgray;
   /* height: 100vh; */
-  display: grid;
-  place-content: center;
+  /* display: grid;
+  place-content: center; */
+  display:flex;
+  justify-content: center;
 }
 
 .parent { 
