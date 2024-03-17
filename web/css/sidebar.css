@@ -1,0 +1,148 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  list-style: none;
+  text-decoration: none;
+  /* font-family: "M PLUS 1p", sans-serif;
+  font-weight: 100;
+  font-style: normal; */
+}
+
+body {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+
+.m-plus {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sidebar {
+  /* display:none; */
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: -12rem;
+  /* left: 0; */
+  background: rgb(70, 48, 10);
+  width: 12rem;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.sidebar header {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 70px;
+  background-color: rgb(138, 90, 10);
+  user-select: none;
+}
+
+.sidebar ul {
+  margin: 0;
+}
+
+.sidebar ul li:hover {
+  padding-left: 5px;
+  transition: 0.1s;
+}
+
+.sidebar ul a {
+  display: block;
+  /* height: 100%; */
+  /* width: 100%; */
+  line-height: 3rem;
+  color: white;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  border-bottom: 1px solid black;
+
+}
+
+.sidebar ul i {
+  margin-right: 1rem;
+}
+
+/* #menu-label { 
+  display:none;
+} */
+
+#menu-check {
+  display: none;
+}
+
+#menu-check:checked~.sidebar {
+  /* top: 80px; */
+  left: 0;
+}
+
+#hamburger_btn,
+#cancel_btn {
+  position: fixed;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#hamburger_btn {
+  top: 5px;
+  left: 5px;
+  font-size: 25px;
+  padding: 12px;
+  background-color: rgb(138, 90, 10);
+  z-index: 11;
+  transition: all 0.5s;
+}
+
+#cancel_btn {
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  padding: 12px;
+  z-index: 10;
+  /* display: none; */
+  opacity: 0;
+  transition-property: color;
+  transition-duration: 1s;
+}
+
+#menu-check:checked~label #hamburger_btn {
+  left: 9rem;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+#menu-check:checked~label #cancel_btn {
+  /* display: block; */
+  left: 9.5rem;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+
+.honbun {
+  /* position: fixed;
+  top: 0;
+  left: 250px; */
+  /* margin: 20px; */
+  padding: 50px 100px;
+  background-image: url("../img/desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+}
+
+#menu-check:checked ~ .honbun {
+  margin-left: 12rem;
+  padding: 50px 50px;
+  transition: all 0.5s;
+}

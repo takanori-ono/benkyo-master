@@ -66,4 +66,5 @@ body {
 main,
 main a {
   color: white;
+  margin: 15px;
 }
