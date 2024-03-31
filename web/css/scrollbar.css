@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 15px;
+    display:flex;
+    justify-content: center;
+}
+
+.element {
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
+    max-width:300px;
+    flex-grow: 1;
+    /* flex-basis: 1; */
+    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}

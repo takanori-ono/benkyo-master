@@ -127,9 +127,16 @@ input:hover {
     display:inline-block;
     width: 100px;
     text-align: right;
+    font-weight: bold;
     margin-right: 0.5em;
     flex-basis: 6em;
-    flex-shrink: 0; /*これがないと縮んでしまう*/
+    /* 下がないと縮んでしまう */
+    flex-shrink: 0; 
+
+    /* text-align: justify;
+    text-justify: inter-ideograph;
+    text-justify: inter-ideograph;
+    word-break: break-all; */
 }
 
 .basic_row label::after {
